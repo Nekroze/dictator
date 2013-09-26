@@ -4,7 +4,7 @@ from nekrobox.docdecs import params
 class CardField(object):
     """
     An array of cards of limited size that provides storage.
-    
+
     provides a list of card slots (None or a card) and the boolean values
     ``full`` and ``overflow``.
     """
@@ -27,7 +27,7 @@ class CardField(object):
         elif size < self.size:
             if self.full:
                 self.overflow = True
-            
+
             while size < len(self.cards):
                 try:
                     self.cards.remove(None)
@@ -56,7 +56,7 @@ class CardField(object):
         else:
             self.cards[self.cards.index(card)] = None
             self.full = False
-        
+
     @params(card=(object, "Card to be added to this field"))
     def add_card(self, card):
         """Add the given card."""
@@ -66,3 +66,4 @@ class CardField(object):
         else:
             self.cards[self.cards.index(None)] = card
             self.full = None not in self.cards
+
