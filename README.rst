@@ -12,8 +12,7 @@ dictator
         :target: https://crate.io/packages/dictator?version=latest
 
 
-A rule compiler for a card game made with librarian.
-
+A rules library for card games made with librarian.
 
 Features
 --------
