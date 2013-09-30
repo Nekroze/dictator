@@ -46,7 +46,7 @@ class CardField(object):
             self.cards[index] = None
             self.full = False
 
-    @params(card=(object, "Card to be removed from this field"))
+    @params(card=(int, "Card to be removed from this field"))
     def remove_card(self, card):
         """Remove the given card."""
         if self.overflow:
@@ -57,7 +57,7 @@ class CardField(object):
             self.cards[self.cards.index(card)] = None
             self.full = False
 
-    @params(card=(object, "Card to be added to this field"))
+    @params(card=(int, "Card to be added to this field"))
     def add_card(self, card):
         """Add the given card."""
         if self.full:
