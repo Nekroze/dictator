@@ -29,9 +29,9 @@ class CardField(object):
                 self.overflow = True
 
             while size < len(self.cards):
-                try:
+                if None in self.cards:
                     self.cards.remove(None)
-                except ValueError:
+                else:
                     break
         self.size = size
 
